@@ -26,7 +26,7 @@ scanner.open(function(err, scannerDb) {
 						transItem = {
 									talkgroup: tg,
 									time: time,
-									name: f
+									name: path.basename(f);
 								};
 						transCollection.insert(transItem);
 						console.log("Added: " + f);	
